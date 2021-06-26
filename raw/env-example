@@ -1,0 +1,10 @@
+CHOKIDAR_USEPOLLING=true 
+
+REACT_APP_SITE_URL=https://standoffpay.ru
+REACT_APP_SITE_AUTH_URL=https://api.standoffpay.ru/auth
+REACT_APP_SITE_API_URL=https://api.standoffpay.ru/api
+
+REACT_APP_SITE_SOCIAL_VK=https://vk.com/standoffcase
+REACT_APP_SITE_SOCIAL_YOTUBE=https://www.youtube.com/channel/UCpPYX9suGwFC921OMwqqDbQ
+REACT_APP_SITE_SOCIAL_INSTAGRAM=https://www.instagram.com/standoffcase/
+REACT_APP_SITE_SOCIAL_TELEGRAM=https://t.me/standoffcaseru

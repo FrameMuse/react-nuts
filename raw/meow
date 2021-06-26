@@ -1,0 +1,27 @@
+#!/bin/bash
+
+homeDir="/home/kotto"
+reactProjectDir="$homeDir/StandoffCase/react"
+
+name=$1
+param=$2
+
+# echo name: $name
+# echo param: $param
+# echo $reactProjectDir
+
+if [[ -z $1 ]]
+then
+  echo -n "Meow a script with name and param: "
+  read name param
+fi
+
+
+case $name in
+  reducer)
+    reducersDir=$reactProjectDir/src/resources/reducers
+    echo Meowed here: $reducersDir/$param
+    touch $reducersDir/$param
+    code $reducersDir/$param
+  ;;
+esac
