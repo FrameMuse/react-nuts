@@ -1,6 +1,7 @@
 {
   "name": "bit-workspace",
   "version": "0.0.3",
+  "type": "module",
   "description": "workpspace for bit developing",
   "main": "index.js",
   "scripts": {
