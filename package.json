@@ -1,6 +1,6 @@
 {
   "name": "react-project-nuts",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "description": "React project nuts.",
   "publishConfig": {
