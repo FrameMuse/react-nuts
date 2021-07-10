@@ -1,16 +1,19 @@
 {
   "compilerOptions": {
+    "composite": true,
     "experimentalDecorators": true,
-    "baseUrl": "./src/",
+    "typeRoots": [
+      "node_modules/@types",
+      "types"
+    ],
     "target": "ES5",
+    "baseUrl": "src",
     "lib": [
       "dom",
       "ES5",
       "ES6",
       "ESNext"
     ],
-    "allowJs": true,
-    "skipLibCheck": false,
     "noImplicitAny": true,
     "strictNullChecks": true,
     "esModuleInterop": true,
@@ -26,12 +29,20 @@
     "removeComments": true,
     "sourceMap": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "emitDecoratorMetadata": true,
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "checkJs": false
+  },
+  "typeAcquisition": {
+    "include": [
+      "node"
+    ]
   },
   "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules"
+    "src/**/*",
+    "src/**/*.json",
+    "node_modules/@framemuse"
   ]
 }

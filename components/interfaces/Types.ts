@@ -1,0 +1,1 @@
+export type Preserved<T> = T & unknown

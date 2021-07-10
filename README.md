@@ -1,2 +1,3 @@
-# bit workspace
- Bit workspace with components developed by me so far
+# React project nuts
+
+React project nuts.
