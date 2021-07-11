@@ -1,6 +1,6 @@
 import { useContext, useRef } from "react"
 import { PopupContext } from "./context"
-import { PopupWindow } from "./interfaces"
+import type { PopupWindow } from "./interfaces"
 
 export default function usePopupContext() {
   const context = useRef(useContext(PopupContext))

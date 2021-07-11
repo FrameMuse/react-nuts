@@ -1,3 +1,4 @@
+// @ts-expect-error no file type
 import HTMLParse, { HTMLReactParserOptions } from "html-react-parser"
 import { createElement } from "react"
 import { Link } from "react-router-dom"
@@ -252,13 +253,13 @@ export class Exception<Name = string, Message = string> {
     public message?: Message,
     ...error: unknown[]
   ) {
-    console.group(name)
-    console.trace(name)
-    error.forEach(console.error)
-    console.groupEnd()
+    if (process.env.NODE_ENV !== "production") {
+      console.group(name)
+      console.trace(name)
+      error.forEach(console.error)
+      console.groupEnd()
+    }
   }
-
-
 }
 
 export * from "./random"

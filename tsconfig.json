@@ -2,10 +2,6 @@
   "compilerOptions": {
     "composite": true,
     "experimentalDecorators": true,
-    "typeRoots": [
-      "node_modules/@types",
-      "types"
-    ],
     "target": "ES5",
     "baseUrl": "src",
     "lib": [

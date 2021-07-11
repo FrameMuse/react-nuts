@@ -7,9 +7,13 @@
   "publishConfig": {
     "access": "public"
   },
+  "bin": {
+    "build-arch": "bin/build-arch.cjs"
+  },
   "scripts": {
     "build": "tsc --build",
-    "clean": "tsc --build --clean"
+    "clean": "tsc --build --clean",
+    "release-patch": "npm version patch && npm publish && git push --follow-tags"
   },
   "author": "framemuse",
   "license": "MIT",

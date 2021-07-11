@@ -1,4 +1,4 @@
-export type PopupComponent<P> = (props: P) => JSX.Element
+export type PopupComponent<P> = (props: P) => JSX.Element | null
 
 export interface PopupParams {
   id: string | number
@@ -7,7 +7,7 @@ export interface PopupParams {
   closable: boolean
 }
 
-export interface PopupWindow<P = {}> {
+export interface PopupWindow<P = Record<string, unknown>> {
   component: PopupComponent<Partial<PopupParams> & P>
   params: Partial<PopupParams> & P
   close: () => void
