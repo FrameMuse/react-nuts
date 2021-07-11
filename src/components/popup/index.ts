@@ -1,2 +1,2 @@
-export { Popup } from "./controller"
+export { Popup as default } from "./controller"
 export { PopupDefaultLayout, PopupHeading } from "./popup"

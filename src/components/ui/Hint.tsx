@@ -1,6 +1,6 @@
 
 import { useEffect, useLayoutEffect, useState } from "react"
-import { classWithModifiers } from "../utils/utils"
+import { classWithModifiers } from "src/utils/utils"
 
 interface HintProps {
   x?: string

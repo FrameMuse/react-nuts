@@ -2,6 +2,7 @@
 import { lazy } from "react"
 import { Route as DOMRoute, RouteComponentProps, Switch } from "react-router-dom"
 import { RouteFlag, ViewRouterComponentProps, ViewRouterProps, Routes, View } from "./interfaces"
+import { Exception } from "src/utils/utils"
 
 const VIEWS_PATH = "views/" // Absolute path to views
 
@@ -11,7 +12,7 @@ function ViewRouterComponent(combinedProps: ViewRouterComponentProps & RouteComp
   )
 }
 
-function ViewRouter(props: ViewRouterProps) {
+export function ViewRouter(props: ViewRouterProps) {
   ResolveViewRouterProps(props)
   const routesKeys = Object.getOwnPropertyNames(Route.routes)
   return (
@@ -64,11 +65,8 @@ export function view<P = unknown>(page: string): View<P> {
     return require(VIEWS_PATH + page).default
   } catch (error) {
     if (process.env.NODE_ENV === "development") {
-      throw error
-      // throw new Excep
-      throw new Error("ViewRouterError: View " + page + " не найден")
+      throw new Exception("ViewRouter", page + " not found", error)
     }
-
   }
 
   return require(VIEWS_PATH + page).default
@@ -77,13 +75,11 @@ export function view<P = unknown>(page: string): View<P> {
 export class Route {
   public static lazy?: boolean
   public static routes: Routes = {}
-  public static path(path: string, view: View, flags: RouteFlag[] = []) {
-    Route.routes[path] = {
+  public static path<T extends string = string>(path: T, view: View, flags: RouteFlag[] = []) {
+    this.routes[path] = {
       path,
       view,
       flags
     }
   }
 }
-
-export default ViewRouter

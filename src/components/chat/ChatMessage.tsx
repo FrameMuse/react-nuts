@@ -1,4 +1,4 @@
-import { classWithModifiers } from "../utils/utils"
+import { classWithModifiers } from "src/utils/utils"
 
 export interface ChatMessageProps {
   isOwner: boolean

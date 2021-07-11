@@ -1,6 +1,6 @@
-import { Preserved } from "essentials/interfaces/Types"
-import { Memo } from "../utils/memo"
-import langFile from "./lang.json"
+/* eslint-disable @typescript-eslint/ban-types */
+import { Preserved } from "src/interfaces/Types"
+import { Memo } from "src/utils/memo"
 
 function requireLangFile(lang: LangName) {
   if (Localization.path) {

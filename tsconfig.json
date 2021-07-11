@@ -40,9 +40,6 @@
       "node"
     ]
   },
-  "include": [
-    "src/**/*",
-    "src/**/*.json",
-    "node_modules/@framemuse"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }

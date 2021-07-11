@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes, Children, useState } from "react"
-import { mergeClasses, classWithModifiers } from "../utils/utils"
+import { mergeClasses, classWithModifiers } from "src/utils/utils"
 
 interface ButtonProps extends ButtonHTMLAttributes<any> {
   color?: "green" | "blue" | "yellow" | "red" | "orange"

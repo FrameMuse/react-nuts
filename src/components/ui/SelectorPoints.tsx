@@ -1,7 +1,7 @@
 
 
 import SelectorComponent from "./SelectorComponent"
-import { mergeClasses, classWithModifiers } from "../utils/utils"
+import { mergeClasses, classWithModifiers } from "src/utils/utils"
 
 export default class SelectorPoints<T = any> extends SelectorComponent<T> {
   render() {

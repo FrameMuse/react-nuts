@@ -3,15 +3,13 @@
   "version": "0.0.5",
   "type": "module",
   "description": "React project nuts.",
+  "main": "nuts.ts",
   "publishConfig": {
     "access": "public"
   },
-  "workspaces": [
-    "components/ViewRouter"
-  ],
   "scripts": {
-    "start": "react-scripts start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc --build",
+    "clean": "tsc --build --clean"
   },
   "author": "framemuse",
   "license": "MIT",

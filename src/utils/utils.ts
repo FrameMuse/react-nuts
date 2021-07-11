@@ -249,8 +249,16 @@ export function CustomFormData(data: Record<string, any>) {
 export class Exception<Name = string, Message = string> {
   constructor(
     public name: Name,
-    public message?: Message
-  ) { }
+    public message?: Message,
+    ...error: unknown[]
+  ) {
+    console.group(name)
+    console.trace(name)
+    error.forEach(console.error)
+    console.groupEnd()
+  }
+
+
 }
 
 export * from "./random"
