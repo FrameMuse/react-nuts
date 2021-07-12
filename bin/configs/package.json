@@ -1,20 +1,17 @@
 {
-  "name": "react-nuts",
-  "version": "0.0.9",
+  "name": "name",
+  "version": "0.0.1",
   "type": "module",
-  "description": "React project nuts.",
+  "description": "description",
   "main": "src/index.ts",
+  "private": true,
   "publishConfig": {
     "access": "public"
   },
-  "bin": {
-    "react-nuts": "bin/deliver-some-nuts.cjs",
-    "build-arch": "bin/build-arch.cjs"
-  },
   "scripts": {
-    "build": "tsc --build",
-    "clean": "tsc --build --clean",
-    "release-patch": "npm version patch && npm publish"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test"
   },
   "author": "framemuse",
   "license": "MIT",
