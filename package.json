@@ -8,9 +8,9 @@
     "access": "public"
   },
   "bin": {
-    "react-nuts": "bin/deliver-some-nuts.js",
-    "build-arch": "bin/build-arch.js",
-    "create-reducer": "bin/create-reducer.js",
+    "react-nuts": "bin/deliver-some-nuts.cjs",
+    "build-arch": "bin/lib/build-arch.sh",
+    "create-reducer": "bin/create-reducer.cjs",
     "create-component": "bin/lib/create-component.sh"
   },
   "scripts": {
