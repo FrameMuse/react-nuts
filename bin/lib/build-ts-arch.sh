@@ -8,7 +8,12 @@ mkdir src/app/api
 mkdir src/assets
 mkdir src/assets/scss
 mkdir src/assets/fonts
+mkdir src/routes
 mkdir src/views
 
 touch src/views/index.tsx
+touch src/routes/origin.ts
 touch src/assets/scss/base.scss
+
+cp -i "$1/reducer.master.ts" src/reducers/master.ts
+echo src/reducers/reducers.map.json > {}

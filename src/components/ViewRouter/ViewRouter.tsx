@@ -2,7 +2,7 @@
 import { lazy } from "react"
 import { Route as DOMRoute, RouteComponentProps, Switch } from "react-router-dom"
 import { RouteFlag, ViewRouterComponentProps, ViewRouterProps, Routes, View } from "./interfaces"
-import { Exception } from "src/utils/utils"
+import { Exception } from "utils/utils"
 
 const VIEWS_PATH = "views/" // Absolute path to views
 
