@@ -16,5 +16,5 @@ touch src/routes/origin.ts
 touch src/assets/scss/base.scss
 touch src/reducers/reducers.map.json
 
-cp -i "$1/samples/reducer.master.ts" src/reducers/master.ts
-echo {} > src/reducers/reducers.map.json
+cp -i "$1/samples/reducer.master.ts" src/app/reducers/master.ts
+echo {} > src/app/reducers/reducers.map.json
