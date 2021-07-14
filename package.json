@@ -9,7 +9,6 @@
   },
   "bin": {
     "react-nuts": "bin/deliver-some-nuts.cjs",
-    "build-arch": "bin/lib/build-arch.sh",
     "create-reducer": "bin/create-reducer.cjs",
     "create-component": "bin/lib/create-component.sh"
   },

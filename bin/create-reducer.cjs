@@ -1,5 +1,4 @@
-import { exec } from "child_process"
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs"
+import { readFileSync, writeFileSync } from "fs"
 
 const __DIR__ = process.env.INIT_CWD + "/src/app/reducers"
 const REDUCERS_MAP_PATH = __DIR__ + "/reducers.map.json"
