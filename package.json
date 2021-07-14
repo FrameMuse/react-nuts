@@ -1,6 +1,6 @@
 {
   "name": "react-nuts",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "type": "module",
   "description": "React project nuts.",
   "main": "src/index.ts",
