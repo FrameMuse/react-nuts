@@ -27,7 +27,8 @@
     "react-router-dom": "*",
     "react-scripts": "*",
     "redux": "*",
-    "redux-thunk": "*"
+    "redux-thunk": "*",
+    "shelljs": "*"
   },
   "devDependencies": {
     "@types/node": "*",
@@ -39,8 +40,7 @@
     "@typescript-eslint/parser": "*",
     "eslint": "*",
     "eslint-plugin-react": "*",
-    "typescript": "^4.3",
-    "shelljs": "*"
+    "typescript": "^4.3"
   },
   "browserslist": {
     "production": [
