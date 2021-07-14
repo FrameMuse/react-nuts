@@ -30,6 +30,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "checkJs": false,
+    "types": ["node"],
     "typeRoots": ["types"]
   },
   "typeAcquisition": {
@@ -37,6 +38,6 @@
       "node"
     ]
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "src/**/*.json"],
   "exclude": ["node_modules"]
 }
