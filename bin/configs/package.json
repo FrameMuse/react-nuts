@@ -35,7 +35,8 @@
     "@typescript-eslint/parser": "*",
     "eslint": "*",
     "eslint-plugin-react": "*",
-    "typescript": "*"
+    "typescript": "*",
+    "shelljs": "*"
   },
   "browserslist": {
     "production": [
