@@ -1,4 +1,5 @@
-import { mkdirSync, readFileSync, writeFileSync } from "fs"
+#! /usr/bin/env node
+const { mkdirSync, readFileSync, writeFileSync } = require("fs")
 
 function mkdir(name) {
   if (!existsSync(name)) {
