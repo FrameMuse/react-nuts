@@ -35,7 +35,7 @@ function evalContentVariables(content) {
     ComponentStyleFile: COMPONENT_NAME + STYLE_EXT,
     ComponentStyleClassName: nodeNameToClassName(COMPONENT_NAME)
   }
-  return replaceVariables(content, varsMap)
+  return replaceVariables(content.toString(), varsMap)
 }
 
 
