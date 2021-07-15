@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 import { readFileSync, writeFileSync } from "fs"
-import { currentPath } from "./scripts/command"
+import { currentPath } from "./scripts/command.js"
 
 const __DIR__ = process.env.INIT_CWD + "/src/app/reducers"
 const REDUCERS_MAP_PATH = __DIR__ + "/reducers.map.json"
