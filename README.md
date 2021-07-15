@@ -8,10 +8,13 @@ In few words - make my life as delicious as nuts :\_)
 ## Instalation
 
 To install this package
+
 ```bash
 npm i react-nuts
 ```
+
 To run arch. builder
+
 ```bash
 npx react-nuts
 ```
@@ -32,8 +35,8 @@ npx react-nuts
 
 _This package is created to make **my** life easier, I'm not trying to create a **real package**_ (yet)
 
-
 ## List of commands
 
-- ```npx create-reducer [reducer-name]```
-- ```npx create-component [component-name]```
+- `npx create-reducer [reducer-name]`
+- `npx create-component [component-name]`
+- `npx create-view [route] [view] [,,flags]` ( flags: EXACT_PATH )
