@@ -9,16 +9,15 @@ function revealContentVars(content) {
   return revealVars(content.toString(), varsMap)
 }
 
-function appendOriginRoutes(route, view, ...flags) {
+function appendOriginRoutes(view, ...flags) {
   appendFileSync(
     ORIGIN_ROUTES,
-    `Route.path("${route}", view("${view}"), ${flags.map(flag => `"${flag.toUpperCase()}"`).join(", ")})`
+    `Route.path("${view}", view("${view}"), ${flags.map(flag => `"${flag.toUpperCase()}"`).join(", ")})`
   )
 }
 
-const VIEW_ROUTE = process.argv[2]
-const VIEW_NAME = process.argv[3]
-const VIEW_FLAGS = process.argv.slice(4)
+const VIEW_NAME = process.argv[2]
+const VIEW_FLAGS = process.argv.slice(3)
 const VIEW_PATH = "src/views/" + VIEW_NAME + "/"
 const ORIGIN_ROUTES = "src/routes/origin.ts"
 
@@ -29,4 +28,4 @@ if (!mkdir(COMPONENT_PATH)) {
 const ViewSample = readFileSync(__dirname + "/samples/view.sample.ts")
 
 writeFileSync(VIEW_PATH + "index.ts", revealContentVars(ViewSample))
-appendOriginRoutes(VIEW_ROUTE, VIEW_NAME, ...VIEW_FLAGS)
+appendOriginRoutes(VIEW_NAME, ...VIEW_FLAGS)
