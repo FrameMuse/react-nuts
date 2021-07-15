@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 import { readFileSync, writeFileSync, appendFileSync } from "fs"
-import { mkdir, revealVars } from "./scripts/command.js"
+import { currentPath, mkdir, revealVars } from "./scripts/command.js"
 
 function revealContentVars(content) {
   const varsMap = {
@@ -25,7 +25,7 @@ if (!mkdir(COMPONENT_PATH)) {
   throw new Error(`Component ${VIEW_NAME} path already exists, remove the whole folder to continue`)
 }
 
-const ViewSample = readFileSync(__dirname + "/samples/view.sample.ts")
+const ViewSample = readFileSync(currentPath + "/samples/view.sample.ts")
 
 writeFileSync(VIEW_PATH + "index.ts", revealContentVars(ViewSample))
 appendOriginRoutes(VIEW_NAME, ...VIEW_FLAGS)
