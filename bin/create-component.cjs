@@ -48,7 +48,7 @@ const TEST_EXT = ".test.ts"
 const INDEX_FILE = "index.ts"
 
 if (!mkdir(COMPONENT_PATH)) {
-  throw new Error(`Component ${COMPONENT_NAME} path already exists`)
+  throw new Error(`Component ${COMPONENT_NAME} path already exists, remove the whole folder to continue`)
 }
 
 const ComponentSample = readFileSync(__dirname + "/samples/component.sample.tsx")
