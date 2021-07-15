@@ -22,7 +22,7 @@ function replaceVariables(string, varsMap) {
   for (const varKey in varsMap) {
     if (Object.hasOwnProperty.call(varsMap, varKey)) {
       const varValue = varsMap[varKey]
-      string = string.replace(new RegExp("$" + varKey, "g"), varValue)
+      string = string.replace(new RegExp("\\$" + varKey, "g"), varValue)
     }
   }
 
