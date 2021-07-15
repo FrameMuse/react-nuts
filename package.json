@@ -15,7 +15,7 @@
   "scripts": {
     "build": "tsc --build",
     "clean": "tsc --build --clean",
-    "release-patch": "npm version patch && npm publish"
+    "release-patch": "npm version patch && npm publish && git push --follow-tags"
   },
   "author": "framemuse",
   "license": "MIT",
