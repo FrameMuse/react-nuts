@@ -22,7 +22,7 @@ function replaceVariables(string, varsMap) {
   for (const varKey in varsMap) {
     if (Object.hasOwnProperty.call(varsMap, varKey)) {
       const varValue = varsMap[varKey]
-      string = string.replace("$" + varKey, varValue)
+      string = string.replace(new RegExp("$" + varKey, "g"), varValue)
     }
   }
 
@@ -31,7 +31,7 @@ function replaceVariables(string, varsMap) {
 
 function evalContentVariables(content) {
   const varsMap = {
-    ComponentName: COMPONENT_NAME + COMPONENT_EXT,
+    ComponentName: COMPONENT_NAME,
     ComponentStyleFile: COMPONENT_NAME + STYLE_EXT,
     ComponentStyleClassName: nodeNameToClassName(COMPONENT_NAME)
   }
@@ -40,14 +40,14 @@ function evalContentVariables(content) {
 
 
 const COMPONENT_NAME = process.argv[2]
-const COMPONENTS_PATH = "src/app/components/"
+const COMPONENT_PATH = "src/app/components/" + COMPONENT_NAME + "/"
 
 const COMPONENT_EXT = ".tsx"
 const STYLE_EXT = ".style.scss"
 const TEST_EXT = ".test.ts"
 const INDEX_FILE = "index.ts"
 
-if (!mkdir(COMPONENTS_PATH + COMPONENT_NAME)) {
+if (!mkdir(COMPONENT_PATH)) {
   throw new Error(`Component ${COMPONENT_NAME} path already exists`)
 }
 
@@ -55,7 +55,7 @@ const ComponentSample = readFileSync(__dirname + "/samples/component.sample.tsx"
 const ComponentStyleSample = readFileSync(__dirname + "/samples/component.style.sample.scss")
 const ComponentTestSample = readFileSync(__dirname + "/samples/component.test.sample.ts")
 
-writeFileSync(COMPONENTS_PATH + COMPONENT_NAME + COMPONENT_EXT, evalContentVariables(ComponentSample))
-writeFileSync(COMPONENTS_PATH + COMPONENT_NAME + STYLE_EXT, evalContentVariables(ComponentStyleSample))
-writeFileSync(COMPONENTS_PATH + COMPONENT_NAME + TEST_EXT, evalContentVariables(ComponentTestSample))
+writeFileSync(COMPONENT_PATH + COMPONENT_NAME + COMPONENT_EXT, evalContentVariables(ComponentSample))
+writeFileSync(COMPONENT_PATH + COMPONENT_NAME + STYLE_EXT, evalContentVariables(ComponentStyleSample))
+writeFileSync(COMPONENT_PATH + COMPONENT_NAME + TEST_EXT, evalContentVariables(ComponentTestSample))
 // writeFileSync(COMPONENTS_PATH + INDEX_FILE)

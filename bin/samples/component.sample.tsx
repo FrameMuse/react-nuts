@@ -4,7 +4,7 @@ interface $ComponentNameProps {
 }
 function $ComponentName(props: $ComponentNameProps) {
   return (
-    <div className="$ComponentStyleClassName\">
+    <div className="$ComponentStyleClassName">
 
     </div>
   )
