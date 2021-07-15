@@ -1,6 +1,6 @@
 #! /usr/bin/env node
-const { readFileSync, writeFileSync } = require("fs")
-const { mkdir, nodeNameToClassName, revealVars } = require("./scripts/command")
+import { readFileSync, writeFileSync } from "fs"
+import { mkdir, nodeNameToClassName, revealVars } from "./scripts/command.js"
 
 function revealContentVars(content) {
   const varsMap = {

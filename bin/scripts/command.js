@@ -1,6 +1,6 @@
 import { existsSync, mkdirSync } from "fs"
 
-export function mkdir(name: string) {
+export function mkdir(name) {
   if (!existsSync(name)) {
     mkdirSync(name)
     return true
@@ -8,16 +8,16 @@ export function mkdir(name: string) {
   return false
 }
 
-function getNodeNameElements(name: string) {
+function getNodeNameElements(name) {
   return name.split(/([A-Z]{1,}[a-z]*)/g).filter(Boolean)
 }
 
-export function nodeNameToClassName(nodeName: string) {
+export function nodeNameToClassName(nodeName) {
   const nodeNameElements = getNodeNameElements(nodeName)
   return nodeNameElements.map(element => element.toLowerCase()).join("-")
 }
 
-export function revealVars(string: string, varsMap: Record<string, string>) {
+export function revealVars(string, varsMap) {
   for (const varKey in varsMap) {
     if (Object.hasOwnProperty.call(varsMap, varKey)) {
       const varValue = varsMap[varKey]

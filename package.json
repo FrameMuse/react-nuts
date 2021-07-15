@@ -8,10 +8,10 @@
     "access": "public"
   },
   "bin": {
-    "react-nuts": "bin/deliver-some-nuts.cjs",
-    "create-reducer": "bin/create-reducer.cjs",
-    "create-component": "bin/create-component.cjs",
-    "create-view": "bin/create-view.cjs"
+    "react-nuts": "bin/deliver-some-nuts.js",
+    "create-reducer": "bin/create-reducer.js",
+    "create-component": "bin/create-component.js",
+    "create-view": "bin/create-view.js"
   },
   "scripts": {
     "build": "tsc --build",
