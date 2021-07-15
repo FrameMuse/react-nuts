@@ -9,15 +9,12 @@ In few words - make my life as delicious as nuts :\_)
 
 To install this package
 
-```bash
-npm i react-nuts
-```
+1. `npm i react-nuts` // Install package
+2. `npm i` // Install dependencies
 
 To run arch. builder
 
-```bash
-npx react-nuts
-```
+`npx react-nuts`
 
 ## React app
 
