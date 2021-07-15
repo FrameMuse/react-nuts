@@ -3,7 +3,7 @@ const { readFileSync, writeFileSync } = require("fs")
 
 const __DIR__ = process.env.INIT_CWD + "/src/app/reducers"
 const REDUCERS_MAP_PATH = __DIR__ + "/reducers.map.json"
-const REDUCER_SAMPLE_PATH = "./samples/reducer.sample.ts"
+const REDUCER_SAMPLE_PATH = __dirname + "/samples/reducer.sample.ts"
 const REDUCER_NAME = process.argv[2]
 
 function createReducer() {

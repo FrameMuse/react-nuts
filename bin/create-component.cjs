@@ -1,5 +1,5 @@
 #! /usr/bin/env node
-const { mkdirSync, readFileSync, writeFileSync } = require("fs")
+const { mkdirSync, readFileSync, writeFileSync, existsSync } = require("fs")
 
 function mkdir(name) {
   if (!existsSync(name)) {
@@ -15,7 +15,7 @@ function getNodeNameElements(name) {
 
 function nodeNameToClassName(nodeName) {
   const nodeNameElements = getNodeNameElements(nodeName)
-  return nodeNameElements.map(toLowerCase).join("-")
+  return nodeNameElements.map(element => element.toLowerCase()).join("-")
 }
 
 function replaceVariables(string, varsMap) {
