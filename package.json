@@ -10,7 +10,8 @@
   "bin": {
     "react-nuts": "bin/deliver-some-nuts.cjs",
     "create-reducer": "bin/create-reducer.cjs",
-    "create-component": "bin/create-component.cjs"
+    "create-component": "bin/create-component.cjs",
+    "create-view": "bin/create-view.cjs"
   },
   "scripts": {
     "build": "tsc --build",
