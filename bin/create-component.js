@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 import { readFileSync, writeFileSync } from "fs"
-import { currentPath, mkdir, nodeNameToClassName, revealVars } from "./scripts/command.js"
+import { getPath, mkdir, nodeNameToClassName, revealVars } from "./scripts/command.js"
 
 function revealContentVars(content) {
   const varsMap = {
@@ -23,9 +23,9 @@ if (!mkdir(COMPONENT_PATH)) {
   throw new Error(`Component ${COMPONENT_NAME} path already exists, remove the whole folder to continue`)
 }
 
-const ComponentSample = readFileSync(currentPath + "/samples/component.sample.tsx")
-const ComponentStyleSample = readFileSync(currentPath + "/samples/component.style.sample.scss")
-const ComponentTestSample = readFileSync(currentPath + "/samples/component.test.sample.ts")
+const ComponentSample = readFileSync(getPath(import.meta.url) + "/samples/component.sample.tsx")
+const ComponentStyleSample = readFileSync(getPath(import.meta.url) + "/samples/component.style.sample.scss")
+const ComponentTestSample = readFileSync(getPath(import.meta.url) + "/samples/component.test.sample.ts")
 
 writeFileSync(COMPONENT_PATH + COMPONENT_NAME + COMPONENT_EXT, revealContentVars(ComponentSample))
 writeFileSync(COMPONENT_PATH + COMPONENT_NAME + STYLE_EXT, revealContentVars(ComponentStyleSample))

@@ -2,7 +2,7 @@ import { existsSync, mkdirSync } from "fs"
 import { dirname } from "path"
 import { fileURLToPath } from "url"
 
-export const currentPath = dirname(fileURLToPath(import.meta.url))
+export const getPath = url => dirname(fileURLToPath(url))
 
 export function mkdir(name) {
   if (!existsSync(name)) {
