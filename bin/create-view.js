@@ -25,7 +25,7 @@ if (!mkdir(VIEW_PATH)) {
   throw new Error(`Component ${VIEW_NAME} path already exists, remove the whole folder to continue`)
 }
 
-const ViewSample = readFileSync(getPath(import.meta.url) + "/samples/view.sample.ts")
+const ViewSample = readFileSync(getPath(import.meta.url) + "/samples/view.sample.tsx")
 
 writeFileSync(VIEW_PATH + "index.ts", revealContentVars(ViewSample))
 appendOriginRoutes(VIEW_NAME, ...VIEW_FLAGS)
