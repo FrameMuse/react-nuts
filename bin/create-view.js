@@ -21,7 +21,7 @@ const VIEW_FLAGS = process.argv.slice(3)
 const VIEW_PATH = "src/views/" + VIEW_NAME + "/"
 const ORIGIN_ROUTES = "src/routes/origin.ts"
 
-if (!mkdir(COMPONENT_PATH)) {
+if (!mkdir(VIEW_PATH)) {
   throw new Error(`Component ${VIEW_NAME} path already exists, remove the whole folder to continue`)
 }
 
