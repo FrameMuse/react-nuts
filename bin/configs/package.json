@@ -24,6 +24,7 @@
     "react-scripts": "*",
     "redux": "*",
     "redux-thunk": "*",
+    "html-react-parser": "*",
     "shelljs": "*"
   },
   "devDependencies": {
