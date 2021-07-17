@@ -1,2 +1,4 @@
-raw
+build*
 node_modules
+raw
+TPWD
