@@ -2,7 +2,7 @@
 import { readFileSync, writeFileSync } from "fs"
 import { getPath } from "./scripts/command.js"
 
-const __DIR__ = process.env.INIT_CWD + "/src/app/reducers"
+const __DIR__ = process.env.PWD + "/src/app/reducers"
 const REDUCERS_MAP_PATH = __DIR__ + "/reducers.map.json"
 const REDUCER_SAMPLE_PATH = getPath(import.meta.url) + "/samples/reducer.sample.ts"
 const REDUCER_NAME = process.argv[2]
