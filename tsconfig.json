@@ -3,7 +3,6 @@
     "composite": true,
     "experimentalDecorators": true,
     "target": "ES5",
-    "baseUrl": "src",
     "lib": [
       "dom",
       "ES5",
@@ -29,13 +28,14 @@
     "jsx": "react-jsx",
     "allowJs": true,
     "skipLibCheck": true,
-    "checkJs": false
+    "checkJs": false,
+    "types": ["node"]
   },
   "typeAcquisition": {
     "include": [
       "node"
     ]
   },
-  "include": ["**/*"],
+  "include": ["**/*", "**/*.json"],
   "exclude": ["node_modules"]
 }
