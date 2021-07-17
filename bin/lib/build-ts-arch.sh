@@ -14,6 +14,6 @@ mkdir src/views
 touch src/views/index.tsx
 touch src/assets/scss/base.scss
 
-cp -i "$1/samples/reducer.master.ts" src/app/reducers/master.ts
-cp -i "$1/samples/routes-origin.sample.ts" src/routes/origin.ts
+cp "$1/samples/reducer.master.ts" src/app/reducers/master.ts
+cp "$1/samples/routes-origin.sample.ts" src/routes/origin.ts
 echo {} > src/app/reducers/reducers.map.json
