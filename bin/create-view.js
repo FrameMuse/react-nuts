@@ -12,7 +12,7 @@ function revealContentVars(content) {
 function appendOriginRoutes(view, ...flags) {
   appendFileSync(
     ORIGIN_ROUTES,
-    `Route.path("${view}", view("${view}"), ${flags.map(flag => `"${flag.toUpperCase()}"`).join(", ")})`
+    `\rRoute.path("${view}", view("${view}"), ${flags.map(flag => `"${flag.toUpperCase()}"`).join(", ")})`
   )
 }
 
