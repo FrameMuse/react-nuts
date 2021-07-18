@@ -1,4 +1,4 @@
 build*
 node_modules
 raw
-TPWD
+bin/TPWD
